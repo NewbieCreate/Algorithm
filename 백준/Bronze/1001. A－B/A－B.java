@@ -1,15 +1,20 @@
+import java.io.*;
 import java.util.*;
 
-public class Main
-{
-    public static void main(String[] args)
-    {
-        int a, b;
-        Scanner sc = new Scanner(System.in);
+public class Main{
+    public static void main(String[] args) throws IOException{
+        //입출력 받기
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
-        a = sc.nextInt();
-        b = sc.nextInt();
-        System.out.println(a - b);
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+        int a = Integer.parseInt(st.nextToken());
+        int b = Integer.parseInt(st.nextToken());
+        
+        int sum = a - b;
+        
+        //출력
+        bw.write(String.valueOf(sum));
+        bw.flush();
     }
-        
 }
